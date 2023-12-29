@@ -225,7 +225,7 @@
 
 <div>
   <h1 id="cantidadJugadoresLabel" class="inicial" for="cantidadJugadores">Registro de Dominó Cubano</h1>
-  <input id="cantidadJugadores" class="numero" type="number" placeholder="Número de jugadores" id="cantidadJugadores" min="2" required>
+  <input id="cantidadJugadores" class="numero" type="number" placeholder="Número de jugadores" id="cantidadJugadores" min="2" inputmode="numeric" required>
   <button id="iniciarJuego" class="inicio" onclick="iniciarJuego()">Iniciar Juego</button>
   <button id="agregarRonda" class="ronda" onclick="agregarRonda()" style="display: none;">Agregar Ronda</button>
   <button id="finalizarJuego" class="finalizar" onclick="finalizarJuego()" style="display: none;">Finalizar Juego</button>
@@ -264,7 +264,10 @@
     document.getElementById("imagen").style.display = 'none';
 
     for (var i = 0; i < cantidadJugadores; i++) {
-      var nombre = prompt("Ingrese el nombre del Jugador " + (i + 1));
+      do{
+        var nombre = prompt("Jugador " + (i + 1) + " (nombre)");
+      } while (!nombre.trim());
+      
       jugadores.push({ nombre: nombre, puntos_total: 0, rondasGanadas: 0 });
     }
 
@@ -420,21 +423,29 @@
   }
 
   function agregarRonda() {
-    var table = document.getElementById("tablaJuego").getElementsByTagName('tbody')[0];
-    var newRow = table.insertRow(table.rows.length);
+    if (ronda_actual >= 0){
+      var table = document.getElementById("tablaJuego").getElementsByTagName('tbody')[0];
+      var newRow = table.insertRow(table.rows.length);
 
 
-    newRow.innerHTML += '<tr><td>' + ronda_actual + '</td>';
+      newRow.innerHTML += '<tr><td>' + ronda_actual + '</td>';
 
-    for (var i = 0; i < jugadores.length; i++) {
-      newRow.innerHTML += '<td><input type="number" id="puntos_' + ronda_actual + '_' + i + '" value="0"></td>';
+      for (var i = 0; i < jugadores.length; i++) {
+        newRow.innerHTML += '<td><input type="number" id="puntos_' + ronda_actual + '_' + i + '" value="0" inputmode="numeric"></td>';
+      }
+
+      newRow.innerHTML += '<td><button id="guardarRonda'+ ronda_actual +'" class="guardar" onclick="guardarRonda(' + ronda_actual + ')">Guardar Ronda</button><button id="modificarRonda'+ ronda_actual +'" class="modificar" onclick="modificarRonda(' + ronda_actual + ')">Modificar Ronda</button></td></tr>';
+
+      document.getElementById("modificarRonda" + ronda_actual).disabled = true;
+
+      ronda_actual--;
     }
 
-    newRow.innerHTML += '<td><button id="guardarRonda'+ ronda_actual +'" class="guardar" onclick="guardarRonda(' + ronda_actual + ')">Guardar Ronda</button><button id="modificarRonda'+ ronda_actual +'" class="modificar" onclick="modificarRonda(' + ronda_actual + ')">Modificar Ronda</button></td></tr>';
+    else {
+      alert('El juego terminó. No puedes agregar más rondas. Oprime Finalizar Juego para terminarlo y ver el detalle.');
+      document.getElementById("agregarRonda").disabled = true;
 
-    document.getElementById("modificarRonda" + ronda_actual).disabled = true;
-
-    ronda_actual--;
+    }
 
     
   }
