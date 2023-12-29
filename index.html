@@ -339,8 +339,8 @@
     document.getElementById("puntos_" + ronda + "_" + ganadorRonda).style.backgroundColor = "#b0e57c";  // Cambia el color de fondo para indicar el ganador
 
     ganadoresPorRonda[ronda.toString()] = ganadorRonda;
-    console.log('El ganador de la ronda ' + ronda + ' desde guardarRonda es: '+ ganadoresPorRonda[ronda.toString()])
-    console.log(ganadoresPorRonda)
+    // console.log('El ganador de la ronda ' + ronda + ' desde guardarRonda es: '+ ganadoresPorRonda[ronda.toString()])
+    // console.log(ganadoresPorRonda)
 
     document.getElementById("guardarRonda" + ronda).disabled = true;
     document.getElementById("modificarRonda" + ronda).disabled = false;
@@ -391,8 +391,8 @@
     let ganadorActualRonda; //por si la correccion cambia al ganador anterior
     try{
       ganadorActualRonda = ganadoresPorRonda[ronda.toString()]; //por si la correccion cambia al ganador anterior
-      console.log('ganadoresPorRonda: ')
-      console.log(ganadoresPorRonda)
+      // console.log('ganadoresPorRonda: ')
+      // console.log(ganadoresPorRonda)
     }catch(e){
       console.log('error: '+error)
     }
@@ -405,9 +405,8 @@
       }
     }
 
-    console.log('checkpoint Charly')
     if (ganadorActualRonda != undefined && ganador != ganadorActualRonda){
-      console.log('GanadorActualRonda: '+ganadorActualRonda + ' , y nuevo es: '+ganador)
+      // console.log('GanadorActualRonda: '+ganadorActualRonda + ' , y nuevo es: '+ganador)
       jugadores[ganadorActualRonda].rondasGanadas--; //restar victoria al anterior
       jugadores[ganador].rondasGanadas++; //sumar victoria al nuevo
     }
@@ -415,7 +414,7 @@
       jugadores[ganador].rondasGanadas++;
     }
 
-    console.log('Ganador: '+ ganador+ '. Ganados: '+jugadores[ganador].rondasGanadas)
+    // console.log('Ganador: '+ ganador+ '. Ganados: '+jugadores[ganador].rondasGanadas)
 
     return ganador;
   }
