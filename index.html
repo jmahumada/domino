@@ -4,8 +4,7 @@
   <base target="_top">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="manifest" href="/manifest.json">
- 
+  <link rel="manifest" href="/manifest.json">
   
   <style>
     body {
@@ -19,30 +18,30 @@
     
       background-color: #ffffff; /* Color de fondo */
     }
- 
+
     h1, label {
       margin: 10px;
     }
- 
+
     img {
       max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
       height: auto; /* Mantiene la proporción de la imagen */
     }
- 
+
     table {
       border-collapse: collapse;
       width: 100%;
     }
- 
+
     table, th, td {
       border: 1px solid black;
     }
- 
+
     th, td {
       padding: 10px;
       text-align: center;
     }
- 
+
     button.inicio {
       padding: 10px 20px;
       background-color: #3498db; /* Azul */
@@ -53,12 +52,12 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
- 
+
     /* Cambio de color al pasar el ratón por encima */
     button.inicio:hover {
       background-color: #2980b9; /* Azul más oscuro */
     }
- 
+
     button.ronda {
       padding: 10px 20px;
       background-color: #2ecc71; /* Verde esmeralda */
@@ -69,12 +68,12 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
- 
+
     /* Cambio de color al pasar el ratón por encima */
     button.ronda:hover {
       background-color: #27ae60; /* Verde más oscuro */
     }
- 
+
     button.finalizar {
       padding: 10px 20px;
       background-color: #e74c3c; /* Rojo */
@@ -85,12 +84,12 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
- 
+
     /* Cambio de color al pasar el ratón por encima */
     button.finalizar:hover {
       background-color: #c0392b; /* Rojo más oscuro */
     }
- 
+
     button.nuevoJuego {
       padding: 10px 20px;
       background-color: #4CAF50; /* Verde */
@@ -101,19 +100,19 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
- 
+
     /* Cambio de color al pasar el ratón por encima */
     button.nuevoJuego:hover {
       background-color: #45a049; /* Verde más oscuro */
     }
- 
+
     input.numero {
       padding: 8px;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 14px;
     }
- 
+
     /* Estilo para el botón de guardar */
     button.guardar {
       padding: 10px 20px;
@@ -125,7 +124,7 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
- 
+
     /* Cambio de color al pasar el ratón por encima */
     button.guardar:hover {
       background-color: #219d54; /* Verde más oscuro */
@@ -134,7 +133,7 @@
       background-color: #bdc3c7; /* Gris para deshabilitado */
       cursor: not-allowed; /* Cambia el cursor a "no permitido" */
     }
- 
+
     /* Estilo para el botón de modificar */
     button.modificar {
       padding: 10px 20px;
@@ -146,17 +145,17 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
- 
+
     /* Cambio de color al pasar el ratón por encima */
     button.modificar:hover {
       background-color: #d17c00; /* Amarillo anaranjado más oscuro */
     }
- 
+
     button.modificar:disabled {
       background-color: #bdc3c7; /* Gris para deshabilitado */
       cursor: not-allowed; /* Cambia el cursor a "no permitido" */
     }
- 
+
     /* Estilo para el label inicial */
     label.inicial {
       display: block;
@@ -164,7 +163,7 @@
       font-size: 16px;
       color: #333;
     }
- 
+
     /* Estilo para cuadros de diálogo */
     .dialogo {
       border: 1px solid #ccc;
@@ -173,44 +172,44 @@
       margin: 10px 0;
       font-size: 16px;
     }
- 
+
     /* Estilo para cuadro de diálogo de alert */
     .dialogo.alert {
       background-color: #e74c3c; /* Rojo */
       color: #fff;
     }
- 
+
     /* Estilo para cuadro de diálogo de confirm */
     .dialogo.confirm {
       background-color: #3498db; /* Azul */
       color: #fff;
     }
- 
+
     /* Estilo para la tabla de información del juego */
     .table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
     }
- 
+
     /* Estilo para las celdas de la tabla */
     .table th, .table td {
       border: 1px solid #ccc;
       padding: 10px;
       text-align: left;
     }
- 
+
     /* Estilo para el encabezado de la tabla */
     .table th {
       background-color: #3498db; /* Azul */
       color: #fff;
     }
- 
- 
+
+
   </style>
 </head>
 <body>
- 
+
 <div>
   <h1 id="cantidadJugadoresLabel" class="inicial" for="cantidadJugadores">Registro de Dominó Cubano ☺️</h1>
   <input id="cantidadJugadores" class="numero" type="number" placeholder="Número de jugadores" id="cantidadJugadores" min="2" required>
@@ -220,23 +219,23 @@
   <button id="juegoNuevo" class="nuevoJuego" onclick="juegoNuevo()" style="display: none;">Juego Nuevo</button>
   <br><br>
 </div>
- 
+
 <div id="nombresJugadores" style="display: none;">
   <!-- Espacio para ingresar nombres de jugadores dinámicamente -->
 </div>
- 
+
 <div id="tablaJuego" style="display: none;">
   <!-- Tabla para mostrar resultados -->
 </div>
- 
+
 <img id="imagen" src="https://http2.mlstatic.com/D_NQ_NP_999265-MLM71604600945_092023-O.webp" alt="@JM">
- 
+
 <script>
   var cantidadJugadores;
   var jugadores = [];
   var ronda_actual = 15;
   let ganadoresPorRonda = {} 
- 
+
   function iniciarJuego() {
     cantidadJugadores = document.getElementById("cantidadJugadores").value;
     document.getElementById("nombresJugadores").innerHTML = "";
@@ -250,62 +249,62 @@
     //document.getElementById("finalizarJuego").disabled = false;
     document.getElementById("finalizarJuego").style.display = 'inline';
     document.getElementById("imagen").style.display = 'none';
- 
+
     for (var i = 0; i < cantidadJugadores; i++) {
       var nombre = prompt("Ingrese el nombre del Jugador " + (i + 1));
       jugadores.push({ nombre: nombre, puntos_total: 0, rondasGanadas: 0 });
     }
- 
+
     mostrarTabla();
     agregarRonda();
   }
- 
+
   function mostrarTabla() {
- 
+
     var tablaHTML = '<table>';
     tablaHTML += '</thead>';
     tablaHTML += '<tr><th>Puntos Total</th>';
- 
+
     for (var i = 0; i < jugadores.length; i++) {
       tablaHTML += '<th id="acumulado_' + i + '">0</th>';
     }
- 
+
     tablaHTML += '<td></td></tr>';
- 
- 
+
+
     tablaHTML += '<tr><th>Ronda</th>';
- 
+
     for (var i = 0; i < jugadores.length; i++) {
       tablaHTML += '<th>' + jugadores[i].nombre + '</th>';
     }
- 
+
     tablaHTML += '<th>Acciones de la Ronda</th></tr>';
- 
+
     tablaHTML += '</thead>';
- 
+
     // tablaHTML += '<tbody>';
     // for (var ronda = 15; ronda >= ronda_actual; ronda--) {
     //   tablaHTML += '<tr><td>' + ronda + '</td>';
- 
+
     //   for (var i = 0; i < jugadores.length; i++) {
     //     tablaHTML += '<td><input type="number" id="puntos_' + ronda + '_' + i + '" value="0"></td>';
     //   }
- 
+
     //   tablaHTML += '<td><button id="guardarRonda'+ ronda +'" onclick="guardarRonda(' + ronda + ')">Guardar Ronda</button><button id="modificarRonda'+ ronda +'" onclick="modificarRonda(' + ronda + ')">Modificar Ronda</button></td></tr>';
     
- 
+
     // }
- 
+
     
     // tablaHTML += '</tbody>';
     tablaHTML += '</table>';
- 
+
     
- 
+
     document.getElementById("tablaJuego").innerHTML = tablaHTML;
     document.getElementById("tablaJuego").style.display = "block";
   }
- 
+
   function guardarRonda(ronda) {
     // Implementa la lógica para guardar la ronda y determinar al ganador
     // Actualiza los acumulados y deshabilita los campos
@@ -319,24 +318,24 @@
       document.getElementById("acumulado_" + i).innerText = jugadores[i].puntos_total;
       document.getElementById("puntos_" + ronda + "_" + i).disabled = true;
     }
- 
+
     // Determina al ganador de la ronda y actualiza el botón
     var ganadorRonda = determinarGanadorRonda(ronda);
     //document.getElementById("puntos_" + ronda + "_" + ganadorRonda).value = jugadores[ganadorRonda].nombre;
     //document.getElementById("puntos_" + ronda + "_" + ganadorRonda).disabled = true;
     document.getElementById("puntos_" + ronda + "_" + ganadorRonda).style.backgroundColor = "#b0e57c";  // Cambia el color de fondo para indicar el ganador
- 
+
     ganadoresPorRonda[ronda.toString()] = ganadorRonda;
     console.log('El ganador de la ronda ' + ronda + ' desde guardarRonda es: '+ ganadoresPorRonda[ronda.toString()])
     console.log(ganadoresPorRonda)
- 
+
     document.getElementById("guardarRonda" + ronda).disabled = true;
     document.getElementById("modificarRonda" + ronda).disabled = false;
     
- 
+
     if (ronda_actual < 0 ){ //al final de la ultima
       var confirmacion = window.confirm("Fue la ultima ronda, ¿quieres cerrar el juego?");
- 
+
       if (confirmacion) {
         finalizarJuego()
       } else {
@@ -345,7 +344,7 @@
       
     }
   }
- 
+
   function sumaPuntos(jugador){
     // Calcula la sumatoria de las propiedades similares
     var sumaPuntos = 0;
@@ -354,28 +353,28 @@
       //console.log('-- : '+ jugador['puntos_' + i])
       sumaPuntos += jugador['puntos_' + i];
     }
- 
+
     // Agrega la propiedad 'puntos_total' al objeto
     return sumaPuntos;
   }
- 
+
   function modificarRonda(ronda){
     for (var i = 0; i < jugadores.length; i++) {
       document.getElementById("puntos_" + ronda + "_" + i).disabled = false;
       document.getElementById("puntos_" + ronda + "_" + i).style.backgroundColor = "#ffffff";
- 
+
     }
- 
+
     document.getElementById("guardarRonda" + ronda).disabled = false;
     document.getElementById("modificarRonda" + ronda).disabled = true;
   }
- 
+
   function determinarGanadorRonda(ronda) {
     // Implementa la lógica para determinar al ganador de la ronda
     // Puedes ajustar esta lógica según tus reglas específicas del juego
     var ganador = 0;
     var menorPuntos = jugadores[0]['puntos_' + ronda];
- 
+
     let ganadorActualRonda; //por si la correccion cambia al ganador anterior
     try{
       ganadorActualRonda = ganadoresPorRonda[ronda.toString()]; //por si la correccion cambia al ganador anterior
@@ -384,7 +383,7 @@
     }catch(e){
       console.log('error: '+error)
     }
- 
+
     for (var i = 1; i < jugadores.length; i++) {
       //console.log('- '+ jugadores[i]['puntos_' + ronda] + '  VS ' +menorPuntos)
       if (jugadores[i]['puntos_' + ronda] < menorPuntos) {
@@ -392,7 +391,7 @@
         menorPuntos = jugadores[i]['puntos_' + ronda];
       }
     }
- 
+
     console.log('checkpoint Charly')
     if (ganadorActualRonda != undefined && ganador != ganadorActualRonda){
       console.log('GanadorActualRonda: '+ganadorActualRonda + ' , y nuevo es: '+ganador)
@@ -402,43 +401,43 @@
     else {
       jugadores[ganador].rondasGanadas++;
     }
- 
+
     console.log('Ganador: '+ ganador+ '. Ganados: '+jugadores[ganador].rondasGanadas)
- 
+
     return ganador;
   }
- 
+
   function agregarRonda() {
     var table = document.getElementById("tablaJuego").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.rows.length);
- 
- 
+
+
     newRow.innerHTML += '<tr><td>' + ronda_actual + '</td>';
- 
+
     for (var i = 0; i < jugadores.length; i++) {
       newRow.innerHTML += '<td><input type="number" id="puntos_' + ronda_actual + '_' + i + '" value="0"></td>';
     }
- 
+
     newRow.innerHTML += '<td><button id="guardarRonda'+ ronda_actual +'" class="guardar" onclick="guardarRonda(' + ronda_actual + ')">Guardar Ronda</button><button id="modificarRonda'+ ronda_actual +'" class="modificar" onclick="modificarRonda(' + ronda_actual + ')">Modificar Ronda</button></td></tr>';
- 
+
     document.getElementById("modificarRonda" + ronda_actual).disabled = true;
- 
+
     ronda_actual--;
- 
+
     
   }
- 
+
   function finalizarJuego() {
     // Implementa la lógica para finalizar el juego y mostrar resultados
     // Puedes ajustar esta lógica según tus reglas específicas del juego
- 
+
     var confirmacion = window.confirm("¿Estas seguro que quieres cerrar el juego?");
- 
+
     if (confirmacion) {
       document.getElementById("agregarRonda").disabled = true;
       document.getElementById("iniciarJuego").disabled = false;
       var resultado = '';
- 
+
       // Ordenar el array de jugadores utilizando la función de comparación
       jugadores.sort(compararPorPuntosAscendente);
       for (var i = 0; i < jugadores.length; i++) {
@@ -446,36 +445,34 @@
       }
       
       alert('RESULTADOS \n\n' + resultado);
- 
+
       document.getElementById("agregarRonda").style.display = 'none';
       document.getElementById("finalizarJuego").style.display = 'none';
       document.getElementById("juegoNuevo").style.display = 'inline';
- 
+
       var elementosModificarGuardar = document.querySelectorAll('[id^="modificar"], [id^="guardar"]');
       // Iterar sobre los elementos y aplicar el estilo
       for (var i = 0; i < elementosModificarGuardar.length; i++) {
         elementosModificarGuardar[i].style.display = 'none';
       }
- 
+
     } else {
       alert("Haz las modificaciones, y cuando termines, da click en Finalizar Juego");
     }
- 
- 
+
+
     
   }
- 
+
   function compararPorPuntosAscendente(a, b) {
     return a.puntos_total - b.puntos_total;
   }
- 
+
   function juegoNuevo(){
     location.href = location.href;
   }
- 
+
 </script>
- 
+
 </body>
 </html>
- 
-
