@@ -1,617 +1,481 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #5a5a5a; -webkit-text-stroke: #5a5a5a}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #112d9e; -webkit-text-stroke: #112d9e}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #14606b; -webkit-text-stroke: #14606b}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #8f000f; -webkit-text-stroke: #8f000f; background-color: #f4f5f7}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #1f1f1f; -webkit-text-stroke: #1f1f1f}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #232526; -webkit-text-stroke: #232526}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #232526; -webkit-text-stroke: #232526; min-height: 15.0px}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #3c3f43; -webkit-text-stroke: #3c3f43}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #4d009d; -webkit-text-stroke: #4d009d}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #8f000f; -webkit-text-stroke: #8f000f}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #14511d; -webkit-text-stroke: #14511d}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #131315; -webkit-text-stroke: #131315}
-    span.s1 {font-kerning: none; background-color: #f4f5f7}
-    span.s2 {font-kerning: none; color: #f6000b; background-color: #f4f5f7; -webkit-text-stroke: 0px #f6000b}
-    span.s3 {font-kerning: none; color: #1f1f1f; background-color: #f4f5f7; -webkit-text-stroke: 0px #1f1f1f}
-    span.s4 {font-kerning: none; color: #232526; background-color: #f4f5f7; -webkit-text-stroke: 0px #232526}
-    span.s5 {font-kerning: none; color: #112d9e; background-color: #f4f5f7; -webkit-text-stroke: 0px #112d9e}
-    span.s6 {font-kerning: none; color: #8f000f; background-color: #f4f5f7; -webkit-text-stroke: 0px #8f000f}
-    span.s7 {font-kerning: none; color: #232526; -webkit-text-stroke: 0px #232526}
-    span.s8 {font-kerning: none; color: #1f1f1f; -webkit-text-stroke: 0px #1f1f1f}
-    span.s9 {font-kerning: none; color: #112d9e; -webkit-text-stroke: 0px #112d9e}
-    span.s10 {font-kerning: none; color: #14606b; -webkit-text-stroke: 0px #14606b}
-    span.s11 {font-kerning: none}
-    span.s12 {font-kerning: none; color: #4d009d; background-color: #f4f5f7; -webkit-text-stroke: 0px #4d009d}
-    span.s13 {font-kerning: none; color: #14606b; background-color: #f4f5f7; -webkit-text-stroke: 0px #14606b}
-    span.s14 {font-kerning: none; color: #156536; background-color: #f4f5f7; -webkit-text-stroke: 0px #156536}
-    span.s15 {font-kerning: none; color: #0b2981; background-color: #f4f5f7; -webkit-text-stroke: 0px #0b2981}
-    span.s16 {font-kerning: none; color: #3c3f43; background-color: #f4f5f7; -webkit-text-stroke: 0px #3c3f43}
-    span.s17 {font: 13.0px 'Apple Color Emoji'; font-kerning: none; color: #232526; background-color: #f4f5f7; -webkit-text-stroke: 0px #232526}
-    span.s18 {font-kerning: none; color: #131315; background-color: #f4f5f7; -webkit-text-stroke: 0px #131315}
-    span.Apple-tab-span {white-space:pre}
+  <base target="_top">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="manifest" href="/manifest.json">
+ 
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      //height: 100vh; /* Altura del 100% de la ventana */
+    
+      background-color: #ffffff; /* Color de fondo */
+    }
+ 
+    h1, label {
+      margin: 10px;
+    }
+ 
+    img {
+      max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+      height: auto; /* Mantiene la proporción de la imagen */
+    }
+ 
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+ 
+    table, th, td {
+      border: 1px solid black;
+    }
+ 
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+ 
+    button.inicio {
+      padding: 10px 20px;
+      background-color: #3498db; /* Azul */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+ 
+    /* Cambio de color al pasar el ratón por encima */
+    button.inicio:hover {
+      background-color: #2980b9; /* Azul más oscuro */
+    }
+ 
+    button.ronda {
+      padding: 10px 20px;
+      background-color: #2ecc71; /* Verde esmeralda */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+ 
+    /* Cambio de color al pasar el ratón por encima */
+    button.ronda:hover {
+      background-color: #27ae60; /* Verde más oscuro */
+    }
+ 
+    button.finalizar {
+      padding: 10px 20px;
+      background-color: #e74c3c; /* Rojo */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+ 
+    /* Cambio de color al pasar el ratón por encima */
+    button.finalizar:hover {
+      background-color: #c0392b; /* Rojo más oscuro */
+    }
+ 
+    button.nuevoJuego {
+      padding: 10px 20px;
+      background-color: #4CAF50; /* Verde */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+ 
+    /* Cambio de color al pasar el ratón por encima */
+    button.nuevoJuego:hover {
+      background-color: #45a049; /* Verde más oscuro */
+    }
+ 
+    input.numero {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+ 
+    /* Estilo para el botón de guardar */
+    button.guardar {
+      padding: 10px 20px;
+      background-color: #27ae60; /* Verde esmeralda */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+ 
+    /* Cambio de color al pasar el ratón por encima */
+    button.guardar:hover {
+      background-color: #219d54; /* Verde más oscuro */
+    }
+    button.guardar:disabled {
+      background-color: #bdc3c7; /* Gris para deshabilitado */
+      cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+    }
+ 
+    /* Estilo para el botón de modificar */
+    button.modificar {
+      padding: 10px 20px;
+      background-color: #f39c12; /* Amarillo anaranjado */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+ 
+    /* Cambio de color al pasar el ratón por encima */
+    button.modificar:hover {
+      background-color: #d17c00; /* Amarillo anaranjado más oscuro */
+    }
+ 
+    button.modificar:disabled {
+      background-color: #bdc3c7; /* Gris para deshabilitado */
+      cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+    }
+ 
+    /* Estilo para el label inicial */
+    label.inicial {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+ 
+    /* Estilo para cuadros de diálogo */
+    .dialogo {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+ 
+    /* Estilo para cuadro de diálogo de alert */
+    .dialogo.alert {
+      background-color: #e74c3c; /* Rojo */
+      color: #fff;
+    }
+ 
+    /* Estilo para cuadro de diálogo de confirm */
+    .dialogo.confirm {
+      background-color: #3498db; /* Azul */
+      color: #fff;
+    }
+ 
+    /* Estilo para la tabla de información del juego */
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+ 
+    /* Estilo para las celdas de la tabla */
+    .table th, .table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+ 
+    /* Estilo para el encabezado de la tabla */
+    .table th {
+      background-color: #3498db; /* Azul */
+      color: #fff;
+    }
+ 
+ 
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">html</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">base</span><span class="s4"> </span><span class="s1">target</span><span class="s3">=</span><span class="s6">"_top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s6">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s7"><span class="Apple-converted-space">  </span></span><span class="s8">&lt;</span><span class="s9">meta</span><span class="s7"> </span><span class="s10">name</span><span class="s8">=</span><span class="s11">"viewport"</span><span class="s7"> </span><span class="s10">content</span><span class="s8">=</span><span class="s11">"width=device-width, initial-scale=1.0"</span><span class="s8">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-tab-span">	</span>&lt;link rel="manifest" href="/manifest.json"&gt;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s12">body</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">margin:</span><span class="s1"> </span><span class="s14">0</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">0</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">display:</span><span class="s1"> </span><span class="s6">flex</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">flex-direction:</span><span class="s4"> </span><span class="s6">column</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">align-items:</span><span class="s4"> </span><span class="s6">center</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">justify-content:</span><span class="s4"> </span><span class="s6">center</span><span class="s4">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">//height: 100vh; /* Altura del 100% de la ventana */</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#ffffff</span><span class="s4">; </span><span class="s1">/* Color de fondo */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s12">h1</span><span class="s1">, </span><span class="s12">label</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">margin:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s12">img</span><span class="s1"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">max-width:</span><span class="s4"> </span><span class="s14">100%</span><span class="s4">; </span><span class="s1">/* Asegura que la imagen no exceda el ancho del contenedor */</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">height:</span><span class="s4"> </span><span class="s6">auto</span><span class="s4">; </span><span class="s1">/* Mantiene la proporción de la imagen */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s12">table</span><span class="s1"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-collapse:</span><span class="s4"> </span><span class="s6">collapse</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">width:</span><span class="s1"> </span><span class="s14">100%</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s12">table</span><span class="s1">, </span><span class="s12">th</span><span class="s1">, </span><span class="s12">td</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">border:</span><span class="s1"> </span><span class="s14">1px</span><span class="s1"> </span><span class="s6">solid</span><span class="s1"> </span><span class="s6">black</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s12">th</span><span class="s1">, </span><span class="s12">td</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">text-align:</span><span class="s4"> </span><span class="s6">center</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.inicio</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1"> </span><span class="s14">20px</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s15">#3498db</span><span class="s4">; </span><span class="s16">/* Azul */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">color:</span><span class="s1"> </span><span class="s15">#fff</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">border:</span><span class="s1"> </span><span class="s6">none</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s14">4px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">cursor:</span><span class="s1"> </span><span class="s6">pointer</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s14">16px</span><span class="s4">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">transition:</span><span class="s4"> </span><span class="s1">background-color</span><span class="s4"> </span><span class="s14">0.3s</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Cambio de color al pasar el ratón por encima */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.inicio:hover</span><span class="s4"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#2980b9</span><span class="s4">; </span><span class="s1">/* Azul más oscuro */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.ronda</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1"> </span><span class="s14">20px</span><span class="s1">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#2ecc71</span><span class="s4">; </span><span class="s1">/* Verde esmeralda */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">color:</span><span class="s1"> </span><span class="s15">#fff</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">border:</span><span class="s1"> </span><span class="s6">none</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s14">4px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">cursor:</span><span class="s1"> </span><span class="s6">pointer</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s14">16px</span><span class="s4">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">transition:</span><span class="s4"> </span><span class="s1">background-color</span><span class="s4"> </span><span class="s14">0.3s</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Cambio de color al pasar el ratón por encima */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.ronda:hover</span><span class="s4"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#27ae60</span><span class="s4">; </span><span class="s1">/* Verde más oscuro */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.finalizar</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1"> </span><span class="s14">20px</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s15">#e74c3c</span><span class="s4">; </span><span class="s16">/* Rojo */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">color:</span><span class="s1"> </span><span class="s15">#fff</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">border:</span><span class="s1"> </span><span class="s6">none</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s14">4px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">cursor:</span><span class="s1"> </span><span class="s6">pointer</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s14">16px</span><span class="s4">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">transition:</span><span class="s4"> </span><span class="s1">background-color</span><span class="s4"> </span><span class="s14">0.3s</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Cambio de color al pasar el ratón por encima */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.finalizar:hover</span><span class="s4"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#c0392b</span><span class="s4">; </span><span class="s1">/* Rojo más oscuro */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.nuevoJuego</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1"> </span><span class="s14">20px</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s15">#4CAF50</span><span class="s4">; </span><span class="s16">/* Verde */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">color:</span><span class="s1"> </span><span class="s15">#fff</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">border:</span><span class="s1"> </span><span class="s6">none</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s14">4px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">cursor:</span><span class="s1"> </span><span class="s6">pointer</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s14">16px</span><span class="s4">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">transition:</span><span class="s4"> </span><span class="s1">background-color</span><span class="s4"> </span><span class="s14">0.3s</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Cambio de color al pasar el ratón por encima */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.nuevoJuego:hover</span><span class="s4"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#45a049</span><span class="s4">; </span><span class="s1">/* Verde más oscuro */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">input.numero</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">8px</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">border:</span><span class="s1"> </span><span class="s14">1px</span><span class="s1"> </span><span class="s6">solid</span><span class="s1"> </span><span class="s15">#ccc</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s14">4px</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s14">14px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Estilo para el botón de guardar */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.guardar</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1"> </span><span class="s14">20px</span><span class="s1">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#27ae60</span><span class="s4">; </span><span class="s1">/* Verde esmeralda */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">color:</span><span class="s1"> </span><span class="s15">#fff</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">border:</span><span class="s1"> </span><span class="s6">none</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s14">4px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">cursor:</span><span class="s1"> </span><span class="s6">pointer</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s14">16px</span><span class="s4">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">transition:</span><span class="s4"> </span><span class="s1">background-color</span><span class="s4"> </span><span class="s14">0.3s</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Cambio de color al pasar el ratón por encima */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.guardar:hover</span><span class="s4"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#219d54</span><span class="s4">; </span><span class="s1">/* Verde más oscuro */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.guardar:disabled</span><span class="s4"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#bdc3c7</span><span class="s4">; </span><span class="s1">/* Gris para deshabilitado */</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">cursor:</span><span class="s4"> </span><span class="s6">not-allowed</span><span class="s4">; </span><span class="s1">/* Cambia el cursor a "no permitido" */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Estilo para el botón de modificar */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.modificar</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1"> </span><span class="s14">20px</span><span class="s1">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#f39c12</span><span class="s4">; </span><span class="s1">/* Amarillo anaranjado */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">color:</span><span class="s1"> </span><span class="s15">#fff</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">border:</span><span class="s1"> </span><span class="s6">none</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s14">4px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">cursor:</span><span class="s1"> </span><span class="s6">pointer</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s14">16px</span><span class="s4">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">transition:</span><span class="s4"> </span><span class="s1">background-color</span><span class="s4"> </span><span class="s14">0.3s</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Cambio de color al pasar el ratón por encima */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.modificar:hover</span><span class="s4"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#d17c00</span><span class="s4">; </span><span class="s1">/* Amarillo anaranjado más oscuro */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button.modificar:disabled</span><span class="s4"> {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">background-color:</span><span class="s4"> </span><span class="s15">#bdc3c7</span><span class="s4">; </span><span class="s1">/* Gris para deshabilitado */</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s13">cursor:</span><span class="s4"> </span><span class="s6">not-allowed</span><span class="s4">; </span><span class="s1">/* Cambia el cursor a "no permitido" */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Estilo para el label inicial */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">label.inicial</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">display:</span><span class="s1"> </span><span class="s6">block</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">margin-bottom:</span><span class="s4"> </span><span class="s14">10px</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s14">16px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">color:</span><span class="s1"> </span><span class="s15">#333</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Estilo para cuadros de diálogo */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.dialogo</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">border:</span><span class="s1"> </span><span class="s14">1px</span><span class="s1"> </span><span class="s6">solid</span><span class="s1"> </span><span class="s15">#ccc</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s14">4px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">margin:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1"> </span><span class="s14">0</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s14">16px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Estilo para cuadro de diálogo de alert */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.dialogo.alert</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s15">#e74c3c</span><span class="s4">; </span><span class="s16">/* Rojo */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">color:</span><span class="s1"> </span><span class="s15">#fff</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Estilo para cuadro de diálogo de confirm */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.dialogo.confirm</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s15">#3498db</span><span class="s4">; </span><span class="s16">/* Azul */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">color:</span><span class="s1"> </span><span class="s15">#fff</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Estilo para la tabla de información del juego */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s12">.table</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">width:</span><span class="s1"> </span><span class="s14">100%</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-collapse:</span><span class="s4"> </span><span class="s6">collapse</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">margin-top:</span><span class="s4"> </span><span class="s14">20px</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Estilo para las celdas de la tabla */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.table</span><span class="s4"> </span><span class="s1">th</span><span class="s4">, </span><span class="s1">.table</span><span class="s4"> </span><span class="s1">td</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">border:</span><span class="s1"> </span><span class="s14">1px</span><span class="s1"> </span><span class="s6">solid</span><span class="s1"> </span><span class="s15">#ccc</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">padding:</span><span class="s1"> </span><span class="s14">10px</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">text-align:</span><span class="s4"> </span><span class="s6">left</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">/* Estilo para el encabezado de la tabla */</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.table</span><span class="s4"> </span><span class="s1">th</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s15">#3498db</span><span class="s4">; </span><span class="s16">/* Azul */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s13">color:</span><span class="s1"> </span><span class="s15">#fff</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">div</span><span class="s3">&gt;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">h1</span><span class="s4"> </span><span class="s13">id</span><span class="s3">=</span><span class="s1">"cantidadJugadoresLabel"</span><span class="s4"> </span><span class="s13">class</span><span class="s3">=</span><span class="s1">"inicial"</span><span class="s4"> </span><span class="s13">for</span><span class="s3">=</span><span class="s1">"cantidadJugadores"</span><span class="s3">&gt;</span><span class="s4">Registro de Dominó Cubano </span><span class="s17">☺️</span><span class="s3">&lt;/</span><span class="s5">h1</span><span class="s3">&gt;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">input</span><span class="s4"> </span><span class="s13">id</span><span class="s3">=</span><span class="s1">"cantidadJugadores"</span><span class="s4"> </span><span class="s13">class</span><span class="s3">=</span><span class="s1">"numero"</span><span class="s4"> </span><span class="s13">type</span><span class="s3">=</span><span class="s1">"number"</span><span class="s4"> </span><span class="s13">placeholder</span><span class="s3">=</span><span class="s1">"Número de jugadores"</span><span class="s4"> </span><span class="s13">id</span><span class="s3">=</span><span class="s1">"cantidadJugadores"</span><span class="s4"> </span><span class="s13">min</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s13">required</span><span class="s3">&gt;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">button</span><span class="s4"> </span><span class="s13">id</span><span class="s3">=</span><span class="s1">"iniciarJuego"</span><span class="s4"> </span><span class="s13">class</span><span class="s3">=</span><span class="s1">"inicio"</span><span class="s4"> </span><span class="s13">onclick</span><span class="s3">=</span><span class="s1">"iniciarJuego()"</span><span class="s3">&gt;</span><span class="s4">Iniciar Juego</span><span class="s3">&lt;/</span><span class="s5">button</span><span class="s3">&gt;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">button</span><span class="s4"> </span><span class="s13">id</span><span class="s3">=</span><span class="s1">"agregarRonda"</span><span class="s4"> </span><span class="s13">class</span><span class="s3">=</span><span class="s1">"ronda"</span><span class="s4"> </span><span class="s13">onclick</span><span class="s3">=</span><span class="s1">"agregarRonda()"</span><span class="s4"> </span><span class="s13">style</span><span class="s3">=</span><span class="s1">"display: none;"</span><span class="s3">&gt;</span><span class="s4">Agregar Ronda</span><span class="s3">&lt;/</span><span class="s5">button</span><span class="s3">&gt;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">button</span><span class="s4"> </span><span class="s13">id</span><span class="s3">=</span><span class="s1">"finalizarJuego"</span><span class="s4"> </span><span class="s13">class</span><span class="s3">=</span><span class="s1">"finalizar"</span><span class="s4"> </span><span class="s13">onclick</span><span class="s3">=</span><span class="s1">"finalizarJuego()"</span><span class="s4"> </span><span class="s13">style</span><span class="s3">=</span><span class="s1">"display: none;"</span><span class="s3">&gt;</span><span class="s4">Finalizar Juego</span><span class="s3">&lt;/</span><span class="s5">button</span><span class="s3">&gt;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">button</span><span class="s4"> </span><span class="s13">id</span><span class="s3">=</span><span class="s1">"juegoNuevo"</span><span class="s4"> </span><span class="s13">class</span><span class="s3">=</span><span class="s1">"nuevoJuego"</span><span class="s4"> </span><span class="s13">onclick</span><span class="s3">=</span><span class="s1">"juegoNuevo()"</span><span class="s4"> </span><span class="s13">style</span><span class="s3">=</span><span class="s1">"display: none;"</span><span class="s3">&gt;</span><span class="s4">Juego Nuevo</span><span class="s3">&lt;/</span><span class="s5">button</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s1">br</span><span class="s3">&gt;&lt;</span><span class="s1">br</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p10"><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s13">id</span><span class="s3">=</span><span class="s1">"nombresJugadores"</span><span class="s4"> </span><span class="s13">style</span><span class="s3">=</span><span class="s1">"display: none;"</span><span class="s3">&gt;</span></p>
-<p class="p11"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- Espacio para ingresar nombres de jugadores dinámicamente --&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p10"><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s13">id</span><span class="s3">=</span><span class="s1">"tablaJuego"</span><span class="s4"> </span><span class="s13">style</span><span class="s3">=</span><span class="s1">"display: none;"</span><span class="s3">&gt;</span></p>
-<p class="p11"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- Tabla para mostrar resultados --&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p10"><span class="s3">&lt;</span><span class="s5">img</span><span class="s4"> </span><span class="s13">id</span><span class="s3">=</span><span class="s1">"imagen"</span><span class="s4"> </span><span class="s13">src</span><span class="s3">=</span><span class="s1">"https://http2.mlstatic.com/D_NQ_NP_999265-MLM71604600945_092023-O.webp"</span><span class="s4"> </span><span class="s13">alt</span><span class="s3">=</span><span class="s1">"@JM"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">var</span><span class="s4"> </span><span class="s1">cantidadJugadores</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s5">var</span><span class="s1"> </span><span class="s18">jugadores</span><span class="s1"> = [];</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">var</span><span class="s4"> </span><span class="s1">ronda_actual</span><span class="s4"> = </span><span class="s13">15</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">let</span><span class="s4"> </span><span class="s1">ganadoresPorRonda</span><span class="s4"> = {}<span class="Apple-converted-space"> </span></span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">function</span><span class="s4"> </span><span class="s1">iniciarJuego</span><span class="s4">() {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">cantidadJugadores</span><span class="s4"> = </span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"cantidadJugadores"</span><span class="s4">).</span><span class="s1">value</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"nombresJugadores"</span><span class="s4">).</span><span class="s1">innerHTML</span><span class="s4"> = </span><span class="s6">""</span><span class="s4">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">//document.getElementById("cantidadJugadores").disabled = true;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"cantidadJugadores"</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">'none'</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"cantidadJugadoresLabel"</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">'none'</span><span class="s4">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">//document.getElementById("iniciarJuego").disabled = true;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"iniciarJuego"</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">'none'</span><span class="s4">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">//document.getElementById("agregarRonda").disabled = false;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"agregarRonda"</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">'inline'</span><span class="s4">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">//document.getElementById("finalizarJuego").disabled = false;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"finalizarJuego"</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">'inline'</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"imagen"</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">'none'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">for</span><span class="s1"> (</span><span class="s5">var</span><span class="s1"> </span><span class="s18">i</span><span class="s1"> = </span><span class="s13">0</span><span class="s1">; </span><span class="s18">i</span><span class="s1"> &lt; </span><span class="s18">cantidadJugadores</span><span class="s1">; </span><span class="s18">i</span><span class="s1">++) {</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s5">var</span><span class="s4"> </span><span class="s18">nombre</span><span class="s4"> = </span><span class="s18">prompt</span><span class="s4">(</span><span class="s1">"Ingrese el nombre del Jugador "</span><span class="s4"> + (</span><span class="s18">i</span><span class="s4"> + </span><span class="s13">1</span><span class="s4">));</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">jugadores</span><span class="s4">.</span><span class="s1">push</span><span class="s4">({ </span><span class="s1">nombre</span><span class="s4">: </span><span class="s1">nombre</span><span class="s4">, </span><span class="s1">puntos_total</span><span class="s4">: </span><span class="s13">0</span><span class="s4">, </span><span class="s1">rondasGanadas</span><span class="s4">: </span><span class="s13">0</span><span class="s4"> });</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">mostrarTabla</span><span class="s4">();</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">agregarRonda</span><span class="s4">();</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">function</span><span class="s4"> </span><span class="s1">mostrarTabla</span><span class="s4">() {</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">var</span><span class="s1"> </span><span class="s18">tablaHTML</span><span class="s1"> = </span><span class="s6">'&lt;table&gt;'</span><span class="s1">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s18">tablaHTML</span><span class="s4"> += </span><span class="s1">'&lt;/thead&gt;'</span><span class="s4">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s18">tablaHTML</span><span class="s4"> += </span><span class="s1">'&lt;tr&gt;&lt;th&gt;Puntos Total&lt;/th&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">for</span><span class="s1"> (</span><span class="s5">var</span><span class="s1"> </span><span class="s18">i</span><span class="s1"> = </span><span class="s13">0</span><span class="s1">; </span><span class="s18">i</span><span class="s1"> &lt; </span><span class="s18">jugadores</span><span class="s1">.</span><span class="s18">length</span><span class="s1">; </span><span class="s18">i</span><span class="s1">++) {</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s18">tablaHTML</span><span class="s4"> += </span><span class="s1">'&lt;th id="acumulado_'</span><span class="s4"> + </span><span class="s18">i</span><span class="s4"> + </span><span class="s1">'"&gt;0&lt;/th&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s18">tablaHTML</span><span class="s4"> += </span><span class="s1">'&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s18">tablaHTML</span><span class="s4"> += </span><span class="s1">'&lt;tr&gt;&lt;th&gt;Ronda&lt;/th&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">for</span><span class="s1"> (</span><span class="s5">var</span><span class="s1"> </span><span class="s18">i</span><span class="s1"> = </span><span class="s13">0</span><span class="s1">; </span><span class="s18">i</span><span class="s1"> &lt; </span><span class="s18">jugadores</span><span class="s1">.</span><span class="s18">length</span><span class="s1">; </span><span class="s18">i</span><span class="s1">++) {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">tablaHTML</span><span class="s4"> += </span><span class="s6">'&lt;th&gt;'</span><span class="s4"> + </span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">].</span><span class="s1">nombre</span><span class="s4"> + </span><span class="s6">'&lt;/th&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s18">tablaHTML</span><span class="s4"> += </span><span class="s1">'&lt;th&gt;Acciones de la Ronda&lt;/th&gt;&lt;/tr&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s18">tablaHTML</span><span class="s4"> += </span><span class="s1">'&lt;/thead&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// tablaHTML += '&lt;tbody&gt;';</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// for (var ronda = 15; ronda &gt;= ronda_actual; ronda--) {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// <span class="Apple-converted-space">  </span>tablaHTML += '&lt;tr&gt;&lt;td&gt;' + ronda + '&lt;/td&gt;';</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// <span class="Apple-converted-space">  </span>for (var i = 0; i &lt; jugadores.length; i++) {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// <span class="Apple-converted-space">    </span>tablaHTML += '&lt;td&gt;&lt;input type="number" id="puntos_' + ronda + '_' + i + '" value="0"&gt;&lt;/td&gt;';</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// <span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// <span class="Apple-converted-space">  </span>tablaHTML += '&lt;td&gt;&lt;button id="guardarRonda'+ ronda +'" onclick="guardarRonda(' + ronda + ')"&gt;Guardar Ronda&lt;/button&gt;&lt;button id="modificarRonda'+ ronda +'" onclick="modificarRonda(' + ronda + ')"&gt;Modificar Ronda&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;';</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s16">// }</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// tablaHTML += '&lt;/tbody&gt;';</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s18">tablaHTML</span><span class="s4"> += </span><span class="s1">'&lt;/table&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"tablaJuego"</span><span class="s4">).</span><span class="s1">innerHTML</span><span class="s4"> = </span><span class="s1">tablaHTML</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"tablaJuego"</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">"block"</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">function</span><span class="s4"> </span><span class="s1">guardarRonda</span><span class="s4">(</span><span class="s1">ronda</span><span class="s4">) {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Implementa la lógica para guardar la ronda y determinar al ganador</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Actualiza los acumulados y deshabilita los campos</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">for</span><span class="s1"> (</span><span class="s5">var</span><span class="s1"> </span><span class="s18">i</span><span class="s1"> = </span><span class="s13">0</span><span class="s1">; </span><span class="s18">i</span><span class="s1"> &lt; </span><span class="s18">jugadores</span><span class="s1">.</span><span class="s18">length</span><span class="s1">; </span><span class="s18">i</span><span class="s1">++) {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s5">var</span><span class="s4"> </span><span class="s1">puntos</span><span class="s4"> = </span><span class="s1">parseInt</span><span class="s4">(</span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"puntos_"</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4"> + </span><span class="s6">"_"</span><span class="s4"> + </span><span class="s1">i</span><span class="s4">).</span><span class="s1">value</span><span class="s4">);</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">//jugadores[i].puntos. += puntos;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">][</span><span class="s6">'puntos_'</span><span class="s4">+</span><span class="s1">ronda</span><span class="s4">] = </span><span class="s1">puntos</span><span class="s4">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">//console.log(jugadores)</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">].</span><span class="s1">puntos_total</span><span class="s4"> = </span><span class="s1">sumaPuntos</span><span class="s4">(</span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">]);</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"acumulado_"</span><span class="s4"> + </span><span class="s1">i</span><span class="s4">).</span><span class="s1">innerText</span><span class="s4"> = </span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">].</span><span class="s1">puntos_total</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"puntos_"</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4"> + </span><span class="s6">"_"</span><span class="s4"> + </span><span class="s1">i</span><span class="s4">).</span><span class="s1">disabled</span><span class="s4"> = </span><span class="s5">true</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Determina al ganador de la ronda y actualiza el botón</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">var</span><span class="s4"> </span><span class="s1">ganadorRonda</span><span class="s4"> = </span><span class="s1">determinarGanadorRonda</span><span class="s4">(</span><span class="s1">ronda</span><span class="s4">);</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">//document.getElementById("puntos_" + ronda + "_" + ganadorRonda).value = jugadores[ganadorRonda].nombre;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">//document.getElementById("puntos_" + ronda + "_" + ganadorRonda).disabled = true;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"puntos_"</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4"> + </span><span class="s6">"_"</span><span class="s4"> + </span><span class="s1">ganadorRonda</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">backgroundColor</span><span class="s4"> = </span><span class="s6">"#b0e57c"</span><span class="s4">;<span class="Apple-converted-space">  </span></span><span class="s16">// Cambia el color de fondo para indicar el ganador</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">ganadoresPorRonda</span><span class="s4">[</span><span class="s1">ronda</span><span class="s4">.</span><span class="s1">toString</span><span class="s4">()] = </span><span class="s1">ganadorRonda</span><span class="s4">;</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s18">console</span><span class="s4">.</span><span class="s18">log</span><span class="s4">(</span><span class="s1">'El ganador de la ronda '</span><span class="s4"> + </span><span class="s18">ronda</span><span class="s4"> + </span><span class="s1">' desde guardarRonda es: '</span><span class="s4">+ </span><span class="s18">ganadoresPorRonda</span><span class="s4">[</span><span class="s18">ronda</span><span class="s4">.</span><span class="s18">toString</span><span class="s4">()])</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">console</span><span class="s4">.</span><span class="s1">log</span><span class="s4">(</span><span class="s1">ganadoresPorRonda</span><span class="s4">)</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"guardarRonda"</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4">).</span><span class="s1">disabled</span><span class="s4"> = </span><span class="s5">true</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"modificarRonda"</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4">).</span><span class="s1">disabled</span><span class="s4"> = </span><span class="s5">false</span><span class="s4">;</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">if</span><span class="s4"> (</span><span class="s18">ronda_actual</span><span class="s4"> &lt; </span><span class="s13">0</span><span class="s4"> ){ </span><span class="s1">//al final de la ultima</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s5">var</span><span class="s4"> </span><span class="s18">confirmacion</span><span class="s4"> = </span><span class="s18">window</span><span class="s4">.</span><span class="s18">confirm</span><span class="s4">(</span><span class="s1">"Fue la ultima ronda, ¿quieres cerrar el juego?"</span><span class="s4">);</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s5">if</span><span class="s4"> (</span><span class="s1">confirmacion</span><span class="s4">) {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">finalizarJuego</span><span class="s4">()</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span>} </span><span class="s5">else</span><span class="s1"> {</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s18">alert</span><span class="s4">(</span><span class="s1">"Haz las modificaciones, y cuando termines, da click en Finalizar Juego"</span><span class="s4">);</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">function</span><span class="s4"> </span><span class="s1">sumaPuntos</span><span class="s4">(</span><span class="s1">jugador</span><span class="s4">){</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Calcula la sumatoria de las propiedades similares</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">var</span><span class="s4"> </span><span class="s1">sumaPuntos</span><span class="s4"> = </span><span class="s13">0</span><span class="s4">;</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">for</span><span class="s1"> (</span><span class="s5">var</span><span class="s1"> </span><span class="s18">i</span><span class="s1"> = </span><span class="s13">15</span><span class="s1">; </span><span class="s18">jugador</span><span class="s1">.</span><span class="s18">hasOwnProperty</span><span class="s1">(</span><span class="s6">'puntos_'</span><span class="s1"> + </span><span class="s18">i</span><span class="s1">); </span><span class="s18">i</span><span class="s1">--) {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">//console.log('-- : '+ jugador['puntos_' + i])</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">sumaPuntos</span><span class="s4"> += </span><span class="s1">jugador</span><span class="s4">[</span><span class="s6">'puntos_'</span><span class="s4"> + </span><span class="s1">i</span><span class="s4">];</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Agrega la propiedad 'puntos_total' al objeto</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">return</span><span class="s4"> </span><span class="s1">sumaPuntos</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">function</span><span class="s4"> </span><span class="s1">modificarRonda</span><span class="s4">(</span><span class="s1">ronda</span><span class="s4">){</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">for</span><span class="s1"> (</span><span class="s5">var</span><span class="s1"> </span><span class="s18">i</span><span class="s1"> = </span><span class="s13">0</span><span class="s1">; </span><span class="s18">i</span><span class="s1"> &lt; </span><span class="s18">jugadores</span><span class="s1">.</span><span class="s18">length</span><span class="s1">; </span><span class="s18">i</span><span class="s1">++) {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"puntos_"</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4"> + </span><span class="s6">"_"</span><span class="s4"> + </span><span class="s1">i</span><span class="s4">).</span><span class="s1">disabled</span><span class="s4"> = </span><span class="s5">false</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"puntos_"</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4"> + </span><span class="s6">"_"</span><span class="s4"> + </span><span class="s1">i</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">backgroundColor</span><span class="s4"> = </span><span class="s6">"#ffffff"</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"guardarRonda"</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4">).</span><span class="s1">disabled</span><span class="s4"> = </span><span class="s5">false</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"modificarRonda"</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4">).</span><span class="s1">disabled</span><span class="s4"> = </span><span class="s5">true</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">function</span><span class="s4"> </span><span class="s1">determinarGanadorRonda</span><span class="s4">(</span><span class="s1">ronda</span><span class="s4">) {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Implementa la lógica para determinar al ganador de la ronda</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Puedes ajustar esta lógica según tus reglas específicas del juego</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">var</span><span class="s1"> </span><span class="s18">ganador</span><span class="s1"> = </span><span class="s13">0</span><span class="s1">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">var</span><span class="s4"> </span><span class="s1">menorPuntos</span><span class="s4"> = </span><span class="s1">jugadores</span><span class="s4">[</span><span class="s13">0</span><span class="s4">][</span><span class="s6">'puntos_'</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4">];</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">let</span><span class="s4"> </span><span class="s18">ganadorActualRonda</span><span class="s4">; </span><span class="s1">//por si la correccion cambia al ganador anterior</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">try</span><span class="s1">{</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s18">ganadorActualRonda</span><span class="s4"> = </span><span class="s18">ganadoresPorRonda</span><span class="s4">[</span><span class="s18">ronda</span><span class="s4">.</span><span class="s18">toString</span><span class="s4">()]; </span><span class="s1">//por si la correccion cambia al ganador anterior</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s18">console</span><span class="s4">.</span><span class="s18">log</span><span class="s4">(</span><span class="s1">'ganadoresPorRonda: '</span><span class="s4">)</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">console</span><span class="s4">.</span><span class="s1">log</span><span class="s4">(</span><span class="s1">ganadoresPorRonda</span><span class="s4">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span><span class="s5">catch</span><span class="s1">(</span><span class="s18">e</span><span class="s1">){</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">console</span><span class="s4">.</span><span class="s1">log</span><span class="s4">(</span><span class="s6">'error: '</span><span class="s4">+</span><span class="s1">error</span><span class="s4">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">for</span><span class="s1"> (</span><span class="s5">var</span><span class="s1"> </span><span class="s18">i</span><span class="s1"> = </span><span class="s13">1</span><span class="s1">; </span><span class="s18">i</span><span class="s1"> &lt; </span><span class="s18">jugadores</span><span class="s1">.</span><span class="s18">length</span><span class="s1">; </span><span class="s18">i</span><span class="s1">++) {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">//console.log('- '+ jugadores[i]['puntos_' + ronda] + '<span class="Apple-converted-space">  </span>VS ' +menorPuntos)</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s5">if</span><span class="s4"> (</span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">][</span><span class="s6">'puntos_'</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4">] &lt; </span><span class="s1">menorPuntos</span><span class="s4">) {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">ganador</span><span class="s1"> = </span><span class="s18">i</span><span class="s1">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">menorPuntos</span><span class="s4"> = </span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">][</span><span class="s6">'puntos_'</span><span class="s4"> + </span><span class="s1">ronda</span><span class="s4">];</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s18">console</span><span class="s4">.</span><span class="s18">log</span><span class="s4">(</span><span class="s1">'checkpoint Charly'</span><span class="s4">)</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">if</span><span class="s4"> (</span><span class="s1">ganadorActualRonda</span><span class="s4"> != </span><span class="s5">undefined</span><span class="s4"> &amp;&amp; </span><span class="s1">ganador</span><span class="s4"> != </span><span class="s1">ganadorActualRonda</span><span class="s4">){</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s18">console</span><span class="s4">.</span><span class="s18">log</span><span class="s4">(</span><span class="s1">'GanadorActualRonda: '</span><span class="s4">+</span><span class="s18">ganadorActualRonda</span><span class="s4"> + </span><span class="s1">' , y nuevo es: '</span><span class="s4">+</span><span class="s18">ganador</span><span class="s4">)</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">ganadorActualRonda</span><span class="s4">].</span><span class="s1">rondasGanadas</span><span class="s4">--; </span><span class="s16">//restar victoria al anterior</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">ganador</span><span class="s4">].</span><span class="s1">rondasGanadas</span><span class="s4">++; </span><span class="s16">//sumar victoria al nuevo</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">else</span><span class="s1"> {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">ganador</span><span class="s4">].</span><span class="s1">rondasGanadas</span><span class="s4">++;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">console</span><span class="s4">.</span><span class="s1">log</span><span class="s4">(</span><span class="s6">'Ganador: '</span><span class="s4">+ </span><span class="s1">ganador</span><span class="s4">+ </span><span class="s6">'. Ganados: '</span><span class="s4">+</span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">ganador</span><span class="s4">].</span><span class="s1">rondasGanadas</span><span class="s4">)</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">return</span><span class="s4"> </span><span class="s1">ganador</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">function</span><span class="s4"> </span><span class="s1">agregarRonda</span><span class="s4">() {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">var</span><span class="s4"> </span><span class="s1">table</span><span class="s4"> = </span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"tablaJuego"</span><span class="s4">).</span><span class="s1">getElementsByTagName</span><span class="s4">(</span><span class="s6">'tbody'</span><span class="s4">)[</span><span class="s13">0</span><span class="s4">];</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">var</span><span class="s4"> </span><span class="s1">newRow</span><span class="s4"> = </span><span class="s1">table</span><span class="s4">.</span><span class="s1">insertRow</span><span class="s4">(</span><span class="s1">table</span><span class="s4">.</span><span class="s1">rows</span><span class="s4">.</span><span class="s1">length</span><span class="s4">);</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">newRow</span><span class="s4">.</span><span class="s1">innerHTML</span><span class="s4"> += </span><span class="s6">'&lt;tr&gt;&lt;td&gt;'</span><span class="s4"> + </span><span class="s1">ronda_actual</span><span class="s4"> + </span><span class="s6">'&lt;/td&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s5">for</span><span class="s1"> (</span><span class="s5">var</span><span class="s1"> </span><span class="s18">i</span><span class="s1"> = </span><span class="s13">0</span><span class="s1">; </span><span class="s18">i</span><span class="s1"> &lt; </span><span class="s18">jugadores</span><span class="s1">.</span><span class="s18">length</span><span class="s1">; </span><span class="s18">i</span><span class="s1">++) {</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s18">newRow</span><span class="s4">.</span><span class="s18">innerHTML</span><span class="s4"> += </span><span class="s1">'&lt;td&gt;&lt;input type="number" id="puntos_'</span><span class="s4"> + </span><span class="s18">ronda_actual</span><span class="s4"> + </span><span class="s1">'_'</span><span class="s4"> + </span><span class="s18">i</span><span class="s4"> + </span><span class="s1">'" value="0"&gt;&lt;/td&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s18">newRow</span><span class="s4">.</span><span class="s18">innerHTML</span><span class="s4"> += </span><span class="s1">'&lt;td&gt;&lt;button id="guardarRonda'</span><span class="s4">+ </span><span class="s18">ronda_actual</span><span class="s4"> +</span><span class="s1">'" class="guardar" onclick="guardarRonda('</span><span class="s4"> + </span><span class="s18">ronda_actual</span><span class="s4"> + </span><span class="s1">')"&gt;Guardar Ronda&lt;/button&gt;&lt;button id="modificarRonda'</span><span class="s4">+ </span><span class="s18">ronda_actual</span><span class="s4"> +</span><span class="s1">'" class="modificar" onclick="modificarRonda('</span><span class="s4"> + </span><span class="s18">ronda_actual</span><span class="s4"> + </span><span class="s1">')"&gt;Modificar Ronda&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"modificarRonda"</span><span class="s4"> + </span><span class="s1">ronda_actual</span><span class="s4">).</span><span class="s1">disabled</span><span class="s4"> = </span><span class="s5">true</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">ronda_actual</span><span class="s4">--;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">function</span><span class="s4"> </span><span class="s1">finalizarJuego</span><span class="s4">() {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Implementa la lógica para finalizar el juego y mostrar resultados</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// Puedes ajustar esta lógica según tus reglas específicas del juego</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">var</span><span class="s4"> </span><span class="s18">confirmacion</span><span class="s4"> = </span><span class="s18">window</span><span class="s4">.</span><span class="s18">confirm</span><span class="s4">(</span><span class="s1">"¿Estas seguro que quieres cerrar el juego?"</span><span class="s4">);</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">if</span><span class="s4"> (</span><span class="s1">confirmacion</span><span class="s4">) {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"agregarRonda"</span><span class="s4">).</span><span class="s1">disabled</span><span class="s4"> = </span><span class="s5">true</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"iniciarJuego"</span><span class="s4">).</span><span class="s1">disabled</span><span class="s4"> = </span><span class="s5">false</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s5">var</span><span class="s1"> </span><span class="s18">resultado</span><span class="s1"> = </span><span class="s6">''</span><span class="s1">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">// Ordenar el array de jugadores utilizando la función de comparación</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">jugadores</span><span class="s4">.</span><span class="s1">sort</span><span class="s4">(</span><span class="s1">compararPorPuntosAscendente</span><span class="s4">);</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s5">for</span><span class="s1"> (</span><span class="s5">var</span><span class="s1"> </span><span class="s18">i</span><span class="s1"> = </span><span class="s13">0</span><span class="s1">; </span><span class="s18">i</span><span class="s1"> &lt; </span><span class="s18">jugadores</span><span class="s1">.</span><span class="s18">length</span><span class="s1">; </span><span class="s18">i</span><span class="s1">++) {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">resultado</span><span class="s4"> += </span><span class="s6">'('</span><span class="s4">+(</span><span class="s1">i</span><span class="s4">+</span><span class="s13">1</span><span class="s4">)+ </span><span class="s6">') '</span><span class="s4">+ </span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">].</span><span class="s1">nombre</span><span class="s4"> + </span><span class="s6">': '</span><span class="s4"> + </span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">].</span><span class="s1">puntos_total</span><span class="s4"> + </span><span class="s6">' puntos y '</span><span class="s4"> + </span><span class="s1">jugadores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">].</span><span class="s1">rondasGanadas</span><span class="s4"> + </span><span class="s6">' rondas ganadas.\n'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s18">alert</span><span class="s4">(</span><span class="s1">'RESULTADOS \n\n'</span><span class="s4"> + </span><span class="s18">resultado</span><span class="s4">);</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"agregarRonda"</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">'none'</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"finalizarJuego"</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">'none'</span><span class="s4">;</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s4">.</span><span class="s1">getElementById</span><span class="s4">(</span><span class="s6">"juegoNuevo"</span><span class="s4">).</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">'inline'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s5">var</span><span class="s4"> </span><span class="s1">elementosModificarGuardar</span><span class="s4"> = </span><span class="s1">document</span><span class="s4">.</span><span class="s1">querySelectorAll</span><span class="s4">(</span><span class="s6">'[id^="modificar"], [id^="guardar"]'</span><span class="s4">);</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">// Iterar sobre los elementos y aplicar el estilo</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s5">for</span><span class="s4"> (</span><span class="s5">var</span><span class="s4"> </span><span class="s1">i</span><span class="s4"> = </span><span class="s13">0</span><span class="s4">; </span><span class="s1">i</span><span class="s4"> &lt; </span><span class="s1">elementosModificarGuardar</span><span class="s4">.</span><span class="s1">length</span><span class="s4">; </span><span class="s1">i</span><span class="s4">++) {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">elementosModificarGuardar</span><span class="s4">[</span><span class="s1">i</span><span class="s4">].</span><span class="s1">style</span><span class="s4">.</span><span class="s1">display</span><span class="s4"> = </span><span class="s6">'none'</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>} </span><span class="s5">else</span><span class="s1"> {</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s18">alert</span><span class="s4">(</span><span class="s1">"Haz las modificaciones, y cuando termines, da click en Finalizar Juego"</span><span class="s4">);</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">function</span><span class="s4"> </span><span class="s1">compararPorPuntosAscendente</span><span class="s4">(</span><span class="s1">a</span><span class="s4">, </span><span class="s1">b</span><span class="s4">) {</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">return</span><span class="s4"> </span><span class="s1">a</span><span class="s4">.</span><span class="s1">puntos_total</span><span class="s4"> - </span><span class="s1">b</span><span class="s4">.</span><span class="s1">puntos_total</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s5">function</span><span class="s4"> </span><span class="s1">juegoNuevo</span><span class="s4">(){</span></p>
-<p class="p12"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">location</span><span class="s4">.</span><span class="s1">href</span><span class="s4"> = </span><span class="s1">location</span><span class="s4">.</span><span class="s1">href</span><span class="s4">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"><br>
-</span></p>
+ 
+<div>
+  <h1 id="cantidadJugadoresLabel" class="inicial" for="cantidadJugadores">Registro de Dominó Cubano ☺️</h1>
+  <input id="cantidadJugadores" class="numero" type="number" placeholder="Número de jugadores" id="cantidadJugadores" min="2" required>
+  <button id="iniciarJuego" class="inicio" onclick="iniciarJuego()">Iniciar Juego</button>
+  <button id="agregarRonda" class="ronda" onclick="agregarRonda()" style="display: none;">Agregar Ronda</button>
+  <button id="finalizarJuego" class="finalizar" onclick="finalizarJuego()" style="display: none;">Finalizar Juego</button>
+  <button id="juegoNuevo" class="nuevoJuego" onclick="juegoNuevo()" style="display: none;">Juego Nuevo</button>
+  <br><br>
+</div>
+ 
+<div id="nombresJugadores" style="display: none;">
+  <!-- Espacio para ingresar nombres de jugadores dinámicamente -->
+</div>
+ 
+<div id="tablaJuego" style="display: none;">
+  <!-- Tabla para mostrar resultados -->
+</div>
+ 
+<img id="imagen" src="https://http2.mlstatic.com/D_NQ_NP_999265-MLM71604600945_092023-O.webp" alt="@JM">
+ 
+<script>
+  var cantidadJugadores;
+  var jugadores = [];
+  var ronda_actual = 15;
+  let ganadoresPorRonda = {} 
+ 
+  function iniciarJuego() {
+    cantidadJugadores = document.getElementById("cantidadJugadores").value;
+    document.getElementById("nombresJugadores").innerHTML = "";
+    //document.getElementById("cantidadJugadores").disabled = true;
+    document.getElementById("cantidadJugadores").style.display = 'none';
+    document.getElementById("cantidadJugadoresLabel").style.display = 'none';
+    //document.getElementById("iniciarJuego").disabled = true;
+    document.getElementById("iniciarJuego").style.display = 'none';
+    //document.getElementById("agregarRonda").disabled = false;
+    document.getElementById("agregarRonda").style.display = 'inline';
+    //document.getElementById("finalizarJuego").disabled = false;
+    document.getElementById("finalizarJuego").style.display = 'inline';
+    document.getElementById("imagen").style.display = 'none';
+ 
+    for (var i = 0; i < cantidadJugadores; i++) {
+      var nombre = prompt("Ingrese el nombre del Jugador " + (i + 1));
+      jugadores.push({ nombre: nombre, puntos_total: 0, rondasGanadas: 0 });
+    }
+ 
+    mostrarTabla();
+    agregarRonda();
+  }
+ 
+  function mostrarTabla() {
+ 
+    var tablaHTML = '<table>';
+    tablaHTML += '</thead>';
+    tablaHTML += '<tr><th>Puntos Total</th>';
+ 
+    for (var i = 0; i < jugadores.length; i++) {
+      tablaHTML += '<th id="acumulado_' + i + '">0</th>';
+    }
+ 
+    tablaHTML += '<td></td></tr>';
+ 
+ 
+    tablaHTML += '<tr><th>Ronda</th>';
+ 
+    for (var i = 0; i < jugadores.length; i++) {
+      tablaHTML += '<th>' + jugadores[i].nombre + '</th>';
+    }
+ 
+    tablaHTML += '<th>Acciones de la Ronda</th></tr>';
+ 
+    tablaHTML += '</thead>';
+ 
+    // tablaHTML += '<tbody>';
+    // for (var ronda = 15; ronda >= ronda_actual; ronda--) {
+    //   tablaHTML += '<tr><td>' + ronda + '</td>';
+ 
+    //   for (var i = 0; i < jugadores.length; i++) {
+    //     tablaHTML += '<td><input type="number" id="puntos_' + ronda + '_' + i + '" value="0"></td>';
+    //   }
+ 
+    //   tablaHTML += '<td><button id="guardarRonda'+ ronda +'" onclick="guardarRonda(' + ronda + ')">Guardar Ronda</button><button id="modificarRonda'+ ronda +'" onclick="modificarRonda(' + ronda + ')">Modificar Ronda</button></td></tr>';
+    
+ 
+    // }
+ 
+    
+    // tablaHTML += '</tbody>';
+    tablaHTML += '</table>';
+ 
+    
+ 
+    document.getElementById("tablaJuego").innerHTML = tablaHTML;
+    document.getElementById("tablaJuego").style.display = "block";
+  }
+ 
+  function guardarRonda(ronda) {
+    // Implementa la lógica para guardar la ronda y determinar al ganador
+    // Actualiza los acumulados y deshabilita los campos
+    for (var i = 0; i < jugadores.length; i++) {
+      var puntos = parseInt(document.getElementById("puntos_" + ronda + "_" + i).value);
+      //jugadores[i].puntos. += puntos;
+      jugadores[i]['puntos_'+ronda] = puntos;
+      //console.log(jugadores)
+    
+      jugadores[i].puntos_total = sumaPuntos(jugadores[i]);
+      document.getElementById("acumulado_" + i).innerText = jugadores[i].puntos_total;
+      document.getElementById("puntos_" + ronda + "_" + i).disabled = true;
+    }
+ 
+    // Determina al ganador de la ronda y actualiza el botón
+    var ganadorRonda = determinarGanadorRonda(ronda);
+    //document.getElementById("puntos_" + ronda + "_" + ganadorRonda).value = jugadores[ganadorRonda].nombre;
+    //document.getElementById("puntos_" + ronda + "_" + ganadorRonda).disabled = true;
+    document.getElementById("puntos_" + ronda + "_" + ganadorRonda).style.backgroundColor = "#b0e57c";  // Cambia el color de fondo para indicar el ganador
+ 
+    ganadoresPorRonda[ronda.toString()] = ganadorRonda;
+    console.log('El ganador de la ronda ' + ronda + ' desde guardarRonda es: '+ ganadoresPorRonda[ronda.toString()])
+    console.log(ganadoresPorRonda)
+ 
+    document.getElementById("guardarRonda" + ronda).disabled = true;
+    document.getElementById("modificarRonda" + ronda).disabled = false;
+    
+ 
+    if (ronda_actual < 0 ){ //al final de la ultima
+      var confirmacion = window.confirm("Fue la ultima ronda, ¿quieres cerrar el juego?");
+ 
+      if (confirmacion) {
+        finalizarJuego()
+      } else {
+        alert("Haz las modificaciones, y cuando termines, da click en Finalizar Juego");
+      }
+      
+    }
+  }
+ 
+  function sumaPuntos(jugador){
+    // Calcula la sumatoria de las propiedades similares
+    var sumaPuntos = 0;
+    
+    for (var i = 15; jugador.hasOwnProperty('puntos_' + i); i--) {
+      //console.log('-- : '+ jugador['puntos_' + i])
+      sumaPuntos += jugador['puntos_' + i];
+    }
+ 
+    // Agrega la propiedad 'puntos_total' al objeto
+    return sumaPuntos;
+  }
+ 
+  function modificarRonda(ronda){
+    for (var i = 0; i < jugadores.length; i++) {
+      document.getElementById("puntos_" + ronda + "_" + i).disabled = false;
+      document.getElementById("puntos_" + ronda + "_" + i).style.backgroundColor = "#ffffff";
+ 
+    }
+ 
+    document.getElementById("guardarRonda" + ronda).disabled = false;
+    document.getElementById("modificarRonda" + ronda).disabled = true;
+  }
+ 
+  function determinarGanadorRonda(ronda) {
+    // Implementa la lógica para determinar al ganador de la ronda
+    // Puedes ajustar esta lógica según tus reglas específicas del juego
+    var ganador = 0;
+    var menorPuntos = jugadores[0]['puntos_' + ronda];
+ 
+    let ganadorActualRonda; //por si la correccion cambia al ganador anterior
+    try{
+      ganadorActualRonda = ganadoresPorRonda[ronda.toString()]; //por si la correccion cambia al ganador anterior
+      console.log('ganadoresPorRonda: ')
+      console.log(ganadoresPorRonda)
+    }catch(e){
+      console.log('error: '+error)
+    }
+ 
+    for (var i = 1; i < jugadores.length; i++) {
+      //console.log('- '+ jugadores[i]['puntos_' + ronda] + '  VS ' +menorPuntos)
+      if (jugadores[i]['puntos_' + ronda] < menorPuntos) {
+        ganador = i;
+        menorPuntos = jugadores[i]['puntos_' + ronda];
+      }
+    }
+ 
+    console.log('checkpoint Charly')
+    if (ganadorActualRonda != undefined && ganador != ganadorActualRonda){
+      console.log('GanadorActualRonda: '+ganadorActualRonda + ' , y nuevo es: '+ganador)
+      jugadores[ganadorActualRonda].rondasGanadas--; //restar victoria al anterior
+      jugadores[ganador].rondasGanadas++; //sumar victoria al nuevo
+    }
+    else {
+      jugadores[ganador].rondasGanadas++;
+    }
+ 
+    console.log('Ganador: '+ ganador+ '. Ganados: '+jugadores[ganador].rondasGanadas)
+ 
+    return ganador;
+  }
+ 
+  function agregarRonda() {
+    var table = document.getElementById("tablaJuego").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.rows.length);
+ 
+ 
+    newRow.innerHTML += '<tr><td>' + ronda_actual + '</td>';
+ 
+    for (var i = 0; i < jugadores.length; i++) {
+      newRow.innerHTML += '<td><input type="number" id="puntos_' + ronda_actual + '_' + i + '" value="0"></td>';
+    }
+ 
+    newRow.innerHTML += '<td><button id="guardarRonda'+ ronda_actual +'" class="guardar" onclick="guardarRonda(' + ronda_actual + ')">Guardar Ronda</button><button id="modificarRonda'+ ronda_actual +'" class="modificar" onclick="modificarRonda(' + ronda_actual + ')">Modificar Ronda</button></td></tr>';
+ 
+    document.getElementById("modificarRonda" + ronda_actual).disabled = true;
+ 
+    ronda_actual--;
+ 
+    
+  }
+ 
+  function finalizarJuego() {
+    // Implementa la lógica para finalizar el juego y mostrar resultados
+    // Puedes ajustar esta lógica según tus reglas específicas del juego
+ 
+    var confirmacion = window.confirm("¿Estas seguro que quieres cerrar el juego?");
+ 
+    if (confirmacion) {
+      document.getElementById("agregarRonda").disabled = true;
+      document.getElementById("iniciarJuego").disabled = false;
+      var resultado = '';
+ 
+      // Ordenar el array de jugadores utilizando la función de comparación
+      jugadores.sort(compararPorPuntosAscendente);
+      for (var i = 0; i < jugadores.length; i++) {
+        resultado += '('+(i+1)+ ') '+ jugadores[i].nombre + ': ' + jugadores[i].puntos_total + ' puntos y ' + jugadores[i].rondasGanadas + ' rondas ganadas.\n';
+      }
+      
+      alert('RESULTADOS \n\n' + resultado);
+ 
+      document.getElementById("agregarRonda").style.display = 'none';
+      document.getElementById("finalizarJuego").style.display = 'none';
+      document.getElementById("juegoNuevo").style.display = 'inline';
+ 
+      var elementosModificarGuardar = document.querySelectorAll('[id^="modificar"], [id^="guardar"]');
+      // Iterar sobre los elementos y aplicar el estilo
+      for (var i = 0; i < elementosModificarGuardar.length; i++) {
+        elementosModificarGuardar[i].style.display = 'none';
+      }
+ 
+    } else {
+      alert("Haz las modificaciones, y cuando termines, da click en Finalizar Juego");
+    }
+ 
+ 
+    
+  }
+ 
+  function compararPorPuntosAscendente(a, b) {
+    return a.puntos_total - b.puntos_total;
+  }
+ 
+  function juegoNuevo(){
+    location.href = location.href;
+  }
+ 
+</script>
+ 
 </body>
 </html>
+ 
+
