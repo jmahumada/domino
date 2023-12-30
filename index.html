@@ -14,13 +14,15 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      //height: 100vh; /* Altura del 100% de la ventana */
-    
+      min-height: 100vh; /* Establecer una altura mínima en lugar de 100% */
       background-color: #ffffff; /* Color de fondo */
     }
 
+
     h1, label {
       margin: 10px;
+      font-size: 80px;
+      margin-bottom: 70px;
     }
 
     img {
@@ -33,7 +35,7 @@
       border-collapse: collapse;
       margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
       overflow-x: auto;
-      white-space: nowrap; /* Evita el corte de texto en celdas */
+  
     }
     
     /* Estilos para los encabezados de la tabla */
@@ -43,8 +45,7 @@
       padding: 8px; /* Espaciado interno para los encabezados */
       text-align: center;
       font-size: 18px; /* Tamaño del texto para los encabezados */
-      min-width: 100px; /* O el valor que se ajuste a tus necesidades */
-      white-space: normal;
+      max-width: 100px;
     }
     
     /* Estilos para las celdas de la tabla */
@@ -52,24 +53,35 @@
       border: 1px solid #dddddd; /* Borde gris para las celdas */
       padding: 8px; /* Espaciado interno para las celdas */
       text-align: center;
-      min-width: 100px; /* O el valor que se ajuste a tus necesidades */
-      white-space: normal;
+      font-size: 18px;
+      max-width: 100px;
     }
     
+    td input[type="number"] {
+      width: 100%; /* O el porcentaje que desees */
+      max-width: 100%; /* Ajusta según sea necesario */
+      box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+      font-size: 18px;
+    }
+  
     /* Estilos alternados para las filas de la tabla */
     tr:nth-child(even) {
       background-color: #f9f9f9; /* Fondo gris claro para filas pares */
     }
 
     button.inicio {
-      padding: 10px 20px;
+      padding: 30px 210px 30px 210px;
       background-color: #3498db; /* Azul */
       color: #fff;
       border: none;
-      border-radius: 4px;
+      border-radius: 24px;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 40px;
       transition: background-color 0.3s;
+      white-space: nowrap;
+      
+      text-align: center;
+      margin-bottom: 70px;
     }
 
     /* Cambio de color al pasar el ratón por encima */
@@ -125,6 +137,16 @@
       background-color: #45a049; /* Verde más oscuro */
     }
 
+    input.cantJugadores {
+      padding: 70px 0px 70px 0px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 60px;
+      
+      white-space: nowrap;
+      text-align: center;
+    }
+
     input.numero {
       padding: 8px;
       border: 1px solid #ccc;
@@ -134,7 +156,7 @@
 
     /* Estilo para el botón de guardar */
     button.guardar {
-      padding: 10px 20px;
+      padding: 0px 0px;
       background-color: #27ae60; /* Verde esmeralda */
       color: #fff;
       border: none;
@@ -155,7 +177,7 @@
 
     /* Estilo para el botón de modificar */
     button.modificar {
-      padding: 10px 20px;
+      padding: 0px 0px;
       background-color: #f39c12; /* Amarillo anaranjado */
       color: #fff;
       border: none;
@@ -204,12 +226,6 @@
       color: #fff;
     }
 
-    /* Estilo para la tabla de información del juego */
-    .table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
 
     /* Estilo para las celdas de la tabla */
     .table th, .table td {
@@ -224,14 +240,17 @@
       color: #fff;
     }
 
-
+    .ganador {
+      background-color: #b0e57c; /* Color de fondo para resaltar al ganador */
+    }
   </style>
 </head>
 <body>
 
 <div>
-  <h1 id="cantidadJugadoresLabel" class="inicial" for="cantidadJugadores">Registro de Dominó Cubano</h1>
-  <input id="cantidadJugadores" class="numero" type="number" placeholder="Número de jugadores" id="cantidadJugadores" min="2" inputmode="numeric" required>
+  <h1 id="cantidadJugadoresLabel" class="inicial" for="cantidadJugadores">Dominó Cubano 🇨🇺</h1>
+  <input id="cantidadJugadores" class="cantJugadores" type="number" placeholder="Jugadores" id="cantidadJugadores" min="2" inputmode="numeric" required>
+  <br><br>
   <button id="iniciarJuego" class="inicio" onclick="iniciarJuego()">Iniciar Juego</button>
   <button id="agregarRonda" class="ronda" onclick="agregarRonda()" style="display: none;">Agregar Ronda</button>
   <button id="finalizarJuego" class="finalizar" onclick="finalizarJuego()" style="display: none;">Finalizar Juego</button>
@@ -277,6 +296,8 @@
       jugadores.push({ nombre: nombre, puntos_total: 0, rondasGanadas: 0 });
     }
 
+    alert('Gira tu teléfono a modo horizontal para ver mejor la siguiente pantalla :)')
+
     mostrarTabla();
     agregarRonda();
   }
@@ -284,7 +305,7 @@
   function mostrarTabla() {
 
     var tablaHTML = '<table>';
-    tablaHTML += '</thead>';
+    tablaHTML += '<thead>';
     tablaHTML += '<tr><th>Puntos Total</th>';
 
     for (var i = 0; i < jugadores.length; i++) {
@@ -297,14 +318,14 @@
     tablaHTML += '<tr><th>Ronda</th>';
 
     for (var i = 0; i < jugadores.length; i++) {
-      tablaHTML += '<th>' + jugadores[i].nombre + '</th>';
+      tablaHTML += '<th id="jugador_' + i + '">' + jugadores[i].nombre + '</th>';
     }
 
     tablaHTML += '<th>Acciones de la Ronda</th></tr>';
 
     tablaHTML += '</thead>';
 
-    // tablaHTML += '<tbody>';
+    tablaHTML += '<tbody>';
     // for (var ronda = 15; ronda >= ronda_actual; ronda--) {
     //   tablaHTML += '<tr><td>' + ronda + '</td>';
 
@@ -318,7 +339,7 @@
     // }
 
     
-    // tablaHTML += '</tbody>';
+    tablaHTML += '</tbody>';
     tablaHTML += '</table>';
 
     
@@ -430,6 +451,40 @@
 
   function agregarRonda() {
     if (ronda_actual >= 0){
+      // Obtén la referencia de la tabla y su cuerpo
+      var table = document.getElementById("tablaJuego");
+      var tbody = table.getElementsByTagName('tbody')[0];
+
+      // Inserta una nueva fila al principio
+      var newRow = tbody.insertRow(0);
+
+      // Agrega las celdas a la nueva fila
+      newRow.innerHTML += '<td>' + ronda_actual + '</td>';
+
+      for (var i = 0; i < jugadores.length; i++) {
+        newRow.innerHTML += '<td><input type="number" id="puntos_' + ronda_actual + '_' + i + '" value="" inputmode="numeric"></td>';
+      }
+
+      newRow.innerHTML += '<td><button id="guardarRonda' + ronda_actual + '" class="guardar" onclick="guardarRonda(' + ronda_actual + ')">Guardar Ronda</button><button id="modificarRonda' + ronda_actual + '" class="modificar" onclick="modificarRonda(' + ronda_actual + ')">Modificar Ronda</button></td>';
+
+
+
+      document.getElementById("modificarRonda" + ronda_actual).disabled = true;
+
+      ronda_actual--;
+    }
+
+    else {
+      alert('El juego terminó. No puedes agregar más rondas. Oprime Finalizar Juego para terminarlo y ver el detalle.');
+      document.getElementById("agregarRonda").disabled = true;
+
+    }
+
+    
+  }
+
+  function inversoagregarRonda() {
+    if (ronda_actual >= 0){
       var table = document.getElementById("tablaJuego").getElementsByTagName('tbody')[0];
       var newRow = table.insertRow(table.rows.length);
 
@@ -437,7 +492,7 @@
       newRow.innerHTML += '<tr><td>' + ronda_actual + '</td>';
 
       for (var i = 0; i < jugadores.length; i++) {
-        newRow.innerHTML += '<td><input type="number" id="puntos_' + ronda_actual + '_' + i + '" value="0" inputmode="numeric"></td>';
+        newRow.innerHTML += '<td><input type="number" id="puntos_' + ronda_actual + '_' + i + '" value="" inputmode="numeric"></td>';
       }
 
       newRow.innerHTML += '<td><button id="guardarRonda'+ ronda_actual +'" class="guardar" onclick="guardarRonda(' + ronda_actual + ')">Guardar Ronda</button><button id="modificarRonda'+ ronda_actual +'" class="modificar" onclick="modificarRonda(' + ronda_actual + ')">Modificar Ronda</button></td></tr>';
@@ -467,10 +522,29 @@
       document.getElementById("iniciarJuego").disabled = false;
       var resultado = '';
 
+      var indicesOriginales = jugadores.map(function(_, index) {
+        return index;
+      });
+
+      // Ordenar el array de índices originales y obtener el índice original del primer elemento después de ordenar
+      var indiceOriginalGanador = indicesOriginales.sort(function(a, b) {
+          return jugadores[a].puntos_total - jugadores[b].puntos_total;
+      })[0];
+
+      console.log('INDICE ORIG GANADOR: '+ indiceOriginalGanador)
+
       // Ordenar el array de jugadores utilizando la función de comparación
       jugadores.sort(compararPorPuntosAscendente);
+      
       for (var i = 0; i < jugadores.length; i++) {
+        if (i==indiceOriginalGanador){
+          document.getElementById('acumulado_'+i).classList.add("ganador");
+          document.getElementById('jugador_'+i).classList.add("ganador");
+          document.getElementById('jugador_'+i).innerHTML +='🥇';
+        }
         resultado += '('+(i+1)+ ') '+ jugadores[i].nombre + ': ' + jugadores[i].puntos_total + ' puntos y ' + jugadores[i].rondasGanadas + ' rondas ganadas.\n';
+
+        document.getElementById('acumulado_'+i).innerHTML += '<br>'+jugadores[i].rondasGanadas + ' rondas';
       }
       
       alert('RESULTADOS \n\n' + resultado);
