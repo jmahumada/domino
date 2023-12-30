@@ -32,6 +32,8 @@
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+      overflow-x: auto;
+      white-space: nowrap; /* Evita el corte de texto en celdas */
     }
     
     /* Estilos para los encabezados de la tabla */
@@ -41,6 +43,8 @@
       padding: 8px; /* Espaciado interno para los encabezados */
       text-align: center;
       font-size: 18px; /* Tamaño del texto para los encabezados */
+      min-width: 100px; /* O el valor que se ajuste a tus necesidades */
+      white-space: normal;
     }
     
     /* Estilos para las celdas de la tabla */
@@ -48,6 +52,8 @@
       border: 1px solid #dddddd; /* Borde gris para las celdas */
       padding: 8px; /* Espaciado interno para las celdas */
       text-align: center;
+      min-width: 100px; /* O el valor que se ajuste a tus necesidades */
+      white-space: normal;
     }
     
     /* Estilos alternados para las filas de la tabla */
