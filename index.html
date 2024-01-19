@@ -385,6 +385,7 @@
       }
       
     }
+
   }
 
   function sumaPuntos(jugador){
@@ -449,28 +450,52 @@
   }
 
   function agregarRonda() {
+
     if (ronda_actual >= 0){
-      // Obtén la referencia de la tabla y su cuerpo
-      var table = document.getElementById("tablaJuego");
-      var tbody = table.getElementsByTagName('tbody')[0];
 
-      // Inserta una nueva fila al principio
-      var newRow = tbody.insertRow(0);
+      let botonesGuardar = [];
+      if (ronda_actual < 15){
+        console.log('ronda_actual: '+ronda_actual)
+        for (var i = 15; i > ronda_actual; i--) {
+          let botonGuardar = document.getElementById("guardarRonda" + i);
+          console.log('revisando: '+ botonGuardar.disabled)
+          if (!botonGuardar.disabled){
+            botonesGuardar.push(i)
+          }
+        }
 
-      // Agrega las celdas a la nueva fila
-      newRow.innerHTML += '<td>' + ronda_actual + '</td>';
+        if(botonesGuardar.length > 0){
+          alert('Guarda primero las rondas pendientes: '+ botonesGuardar)
+        }
+      }
+      
 
-      for (var i = 0; i < jugadores.length; i++) {
-        newRow.innerHTML += '<td><input type="number" id="puntos_' + ronda_actual + '_' + i + '" value="" inputmode="numeric"></td>';
+
+      if (ronda_actual == 15 || botonesGuardar.length == 0){
+        // Obtén la referencia de la tabla y su cuerpo
+        var table = document.getElementById("tablaJuego");
+        var tbody = table.getElementsByTagName('tbody')[0];
+
+        // Inserta una nueva fila al principio
+        var newRow = tbody.insertRow(0);
+
+        // Agrega las celdas a la nueva fila
+        newRow.innerHTML += '<td>' + ronda_actual + '</td>';
+
+        for (var i = 0; i < jugadores.length; i++) {
+          newRow.innerHTML += '<td><input type="number" id="puntos_' + ronda_actual + '_' + i + '" value="" inputmode="numeric"></td>';
+        }
+
+        newRow.innerHTML += '<td><button id="guardarRonda' + ronda_actual + '" class="guardar" onclick="guardarRonda(' + ronda_actual + ')">Guardar Ronda</button><button id="modificarRonda' + ronda_actual + '" class="modificar" onclick="modificarRonda(' + ronda_actual + ')">Modificar Ronda</button></td>';
+
+
+
+        document.getElementById("modificarRonda" + ronda_actual).disabled = true;
+
+        ronda_actual--;
       }
 
-      newRow.innerHTML += '<td><button id="guardarRonda' + ronda_actual + '" class="guardar" onclick="guardarRonda(' + ronda_actual + ')">Guardar Ronda</button><button id="modificarRonda' + ronda_actual + '" class="modificar" onclick="modificarRonda(' + ronda_actual + ')">Modificar Ronda</button></td>';
-
-
-
-      document.getElementById("modificarRonda" + ronda_actual).disabled = true;
-
-      ronda_actual--;
+      
     }
 
     else {
@@ -521,6 +546,8 @@
       document.getElementById("iniciarJuego").disabled = false;
       var resultado = '';
 
+      var jugadoresOriginales = {...jugadores}
+
       var indicesOriginales = jugadores.map(function(_, index) {
         return index;
       });
@@ -543,7 +570,7 @@
         }
         resultado += '('+(i+1)+ ') '+ jugadores[i].nombre + ': ' + jugadores[i].puntos_total + ' puntos y ' + jugadores[i].rondasGanadas + ' rondas ganadas.\n';
 
-        document.getElementById('acumulado_'+i).innerHTML += '<br>'+jugadores[i].rondasGanadas + ' rondas';
+        document.getElementById('acumulado_'+i).innerHTML += '<br>'+jugadoresOriginales[i].rondasGanadas + ' rondas';
       }
       
       alert('RESULTADOS \n\n' + resultado);
